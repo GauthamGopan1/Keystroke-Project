@@ -2,18 +2,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fiserv.commercehub.controller.CustomerController;
 import com.fiserv.commercehub.model.Customer;
 import com.fiserv.commercehub.repository.CustomerRepository;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-//@WebMvcTest(CustomerController.class)
-@SpringBootTest
+@RunWith(MockitoJUnitRunner.class)
 public class CustomerControllerTest {
 
-    @MockBean
+    @Mock
     private CustomerRepository customerRepository;
 
     @Test
